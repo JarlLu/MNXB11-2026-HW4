@@ -4,9 +4,16 @@ namespace homework {
 
 void printHello() { std::cout << "Hello, World!" << std::endl; }
 
-void AddOneRef(int &x) { return; x=+1 }
+void AddOneRef(int &x) { 
+    x+=1;
+    return ; 
+}
 
-bool isOdd(int x) { return false; }
+bool isOdd(int x) {
+    if (x<0){x=-x;}
+    if (x%2==1){return true;}
+    else{return false;}
+     }
 
 int floatToInt(float x) { return 0; }
 

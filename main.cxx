@@ -8,6 +8,9 @@
 
 int main() { 
   // Example for as1.0
-  homework::printHello();
+  int a=1;
+  homework::AddOneRef(a);
+  std::cout << a<<"\n";
+  std::cout << homework::isOdd(-1)<<"\n";
 }
 
