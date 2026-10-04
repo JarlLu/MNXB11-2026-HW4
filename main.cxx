@@ -14,5 +14,6 @@ int main() {
   std::cout << a<<"\n";
   std::cout << homework::isOdd(-1)<<"\n";
   std::cout << homework::floatToInt(b) << "\n";
+  std::cout << homework::factorial(5) << "\n";
 }
 

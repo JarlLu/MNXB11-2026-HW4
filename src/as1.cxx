@@ -19,6 +19,16 @@ int floatToInt(float x) {
     int y=static_cast<int>(x);
     return y; }
 
-int factorial(int n) { return 0; }
+int factorial(int n) {
+    if (n>=0){
+        int fact=1;
+        while(n>0){
+            fact*=n; 
+            n-=1;       
+        }
+        return fact;
+    }
+    else {return -1;} 
+}
 
 }; // namespace homework
