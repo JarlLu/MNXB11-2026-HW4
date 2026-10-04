@@ -20,15 +20,11 @@ int floatToInt(float x) {
     return y; }
 
 int factorial(int n) {
-    if (n>=0){
-        int fact=1;
-        while(n>0){
-            fact*=n; 
-            n-=1;       
-        }
-        return fact;
+    if (n>0){
+        return factorial(n-1)*n;
     }
-    else {return -1;} 
+    else if(n==0) {return 1;} 
+    else {return -1;}
 }
 
 }; // namespace homework
