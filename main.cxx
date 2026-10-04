@@ -26,5 +26,10 @@ int main() {
   std::cout << foo.x << "\n";
   std::vector<double> vec=foo.quux();
   std::cout << vec[0]<< vec[1]<<vec[2]<<"\n";
+
+homework::fVector2D x_vec(1.5,2.3);
+homework::fVector2D y_vec(4.2,1.2);
+homework::fVector2D res_vec(5.7,3.5);
+std::cout<< (res_vec==x_vec+y_vec) <<"\n";
 }
 
