@@ -9,8 +9,10 @@
 int main() { 
   // Example for as1.0
   int a=1;
+  int b=-5.5;
   homework::AddOneRef(a);
   std::cout << a<<"\n";
   std::cout << homework::isOdd(-1)<<"\n";
+  std::cout << homework::floatToInt(b) << "\n";
 }
 
