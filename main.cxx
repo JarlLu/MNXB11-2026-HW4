@@ -4,12 +4,13 @@
  * */
 
 #include "as1.hpp"
+#include "as2.hpp"
 #include <iostream>
 
 int main() { 
   // Example for as1.0
   int a=1;
-  int b=-5.5;
+  float b=-5.5;
   homework::AddOneRef(a);
   std::cout << a<<"\n";
   std::cout << homework::isOdd(-1)<<"\n";
@@ -18,6 +19,12 @@ int main() {
   std::cout << homework::factorial(0) << "\n";
   std::cout << homework::factorial(-1) << "\n";
   
-  
+  std::cout << "Assignment 2\n";
+  homework::Foo foo{5};
+  std::cout << foo.bar()<<"\n";
+  std::cout << foo.baz()<<"\n";
+  std::cout << foo.x << "\n";
+  std::vector<double> vec=foo.quux();
+  std::cout << vec[0]<< vec[1]<<vec[2]<<"\n";
 }
 
