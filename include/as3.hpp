@@ -10,11 +10,25 @@ namespace homework {
 // fruits 
 // (a) TO DO: Implement your type (Hint: enum class). Name it "Color" and add three colors:
 // red, green, yellow: make sure to use lower case letters for the colors
-
+enum class Color {
+    red,
+    green,
+    yellow
+};
 // (b) TO DO: Implement a class called "Fruit" that has a constructor taking a
 // string and a "Color" and two methods: "getName" and "getColor" Also implement
 // a pure virtual method "getTaste" that returns a string
+class Fruit {
+    public:
+        Fruit(Color c,std::string n) : color_(c), name_(n) {}
+        std::string getName(Fruit F) {return name_;}
+        Color getColor(Fruit F) {return color_;}
+        virtual std::string getTaste() const = 0;
+    private:
+        Color color_;
+        std::string name_;
 
+};
 // (c) TO DO: Implement a class called "Apple" that inherits from "Fruit"
 // implement the constructor and the "getTaste" method
 // The taste of an apple is "sweet"
