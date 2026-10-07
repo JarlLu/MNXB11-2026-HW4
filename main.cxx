@@ -5,6 +5,7 @@
 
 #include "as1.hpp"
 #include "as2.hpp"
+#include "as3.hpp"
 #include <iostream>
 
 int main() { 
@@ -31,5 +32,16 @@ homework::fVector2D x_vec(1.5,2.3);
 homework::fVector2D y_vec(4.2,1.2);
 homework::fVector2D res_vec(5.7,3.5);
 std::cout<< (res_vec==x_vec+y_vec) <<"\n";
+
+std::cout << "Assignment 3\n";
+
+homework::Apple apple(homework::Color::red);
+
+std::cout << apple.getName() << "\n";
+std::cout << apple.getTaste() << "\n";
+
+if (apple.getColor() == homework::Color::red) {
+    std::cout << "red\n";
+}
 }
 

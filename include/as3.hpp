@@ -20,13 +20,13 @@ enum class Color {
 // a pure virtual method "getTaste" that returns a string
 class Fruit {
     public:
-        Fruit(Color c,std::string n) : color_(c), name_(n) {}
-        std::string getName(Fruit F) {return name_;}
-        Color getColor(Fruit F) {return color_;}
+        Fruit(std::string n,Color c) :  name_(n),color_(c) {}
+        std::string getName() const {return name_;}  
+        Color getColor() const {return color_;} 
         virtual std::string getTaste() const = 0;
     private:
-        Color color_;
         std::string name_;
+        Color color_;
 
 };
 // (c) TO DO: Implement a class called "Apple" that inherits from "Fruit"
@@ -34,5 +34,10 @@ class Fruit {
 // The taste of an apple is "sweet"
 // The constructor should take a "Color" as argument and pass the name "apple"
 // to the base class constructor
+class Apple : public Fruit{
+    public:
+        Apple(Color c) : Fruit("apple",c){}
+        std::string getTaste() const {return "sweet";}
+}; //not done or checked
 
 } // namespace homework
